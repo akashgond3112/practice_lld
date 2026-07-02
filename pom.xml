@@ -1,112 +1,256 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.7.8</version>
-        <!-- Updated to a version compatible with Java 17 -->
-    </parent>
-
-    <groupId>com.java.lld.design</groupId>
-    <artifactId>practice_low_level_desing</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <packaging>pom</packaging>
-    <modules>
-        <module>atmMachine</module>
-        <module>BookMyShow</module>
-        <module>bowlingMachine</module>
-        <module>calculator</module>
-        <module>couponService</module>
-        <module>cricketMachDashBoard</module>
-        <module>DistributedCache</module>
-        <module>DriverAndRiderApplication</module>
-        <module>ElectoralSystem</module>
-        <module>ElevatorDesign</module>
-        <module>EventCalendar</module>
-        <module>FileDirectory</module>
-        <module>FlightTrackingSystem</module>
-        <module>FoodKart</module>
-        <module>HitCounter</module>
-        <module>HotelManagmentSystem</module>
-        <module>LibraryManagementSystem</module>
-        <module>MultiLevelCache</module>
-        <module>ParkingLot</module>
-        <module>PropertyHuntApplication</module>
-        <module>RateLimiter</module>
-        <module>RideSharingApplication</module>
-        <module>UberMini</module>
-        <module>RuleMatcher</module>
-        <module>Scheduler</module>
-        <module>SnakeLadderGame</module>
-        <module>Splitwise</module>
-        <module>StockExchange</module>
-        <module>TrueCaller</module>
-        <module>vacuumCleaner</module>
-        <module>trello</module>
-    </modules>
-
-    <properties>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
-
-    <dependencies>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.18.30</version>
-            <scope>provided</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-api</artifactId>
-            <version>2.17.1</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-core</artifactId>
-            <version>2.17.1</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-slf4j-impl</artifactId>
-            <version>2.17.1</version>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/junit/junit -->
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.13.2</version>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
-
-    <build>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+      
+  <modelVersion>4.0.0</modelVersion>
+      
+  <parent>
+            
+    <groupId>org.springframework.boot</groupId>
+            
+    <artifactId>spring-boot-starter-parent</artifactId>
+            
+    <version>3.2.6</version>
+        
+  </parent>
+      
+  <groupId>com.java.lld.design</groupId>
+      
+  <artifactId>practice_low_level_desing</artifactId>
+      
+  <version>1.0-SNAPSHOT</version>
+      
+  <packaging>pom</packaging>
+      
+  <modules>
+            
+    <module>atmMachine</module>
+            
+    <module>BookMyShow</module>
+            
+    <module>bowlingMachine</module>
+            
+    <module>calculator</module>
+            
+    <module>couponService</module>
+            
+    <module>cricketMachDashBoard</module>
+            
+    <module>DistributedCache</module>
+            
+    <module>DriverAndRiderApplication</module>
+            
+    <module>ElectoralSystem</module>
+            
+    <module>ElevatorDesign</module>
+            
+    <module>EventCalendar</module>
+            
+    <module>FileDirectory</module>
+            
+    <module>FlightTrackingSystem</module>
+            
+    <module>FoodKart</module>
+            
+    <module>HitCounter</module>
+            
+    <module>HotelManagmentSystem</module>
+            
+    <module>LibraryManagementSystem</module>
+            
+    <module>MultiLevelCache</module>
+            
+    <module>ParkingLot</module>
+            
+    <module>PropertyHuntApplication</module>
+            
+    <module>RateLimiter</module>
+            
+    <module>RideSharingApplication</module>
+            
+    <module>UberMini</module>
+            
+    <module>RuleMatcher</module>
+            
+    <module>Scheduler</module>
+            
+    <module>SnakeLadderGame</module>
+            
+    <module>Splitwise</module>
+            
+    <module>StockExchange</module>
+            
+    <module>TrueCaller</module>
+            
+    <module>vacuumCleaner</module>
+            
+    <module>trello</module>
+          
+    <module>ratelimitertwo</module>
+      
+  </modules>
+      
+  <properties>
+            
+    <maven.compiler.source>25</maven.compiler.source>
+            
+    <maven.compiler.target>25</maven.compiler.target>
+            
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        
+  </properties>
+      
+  <dependencies>
+            
+    <dependency>
+                  
+      <groupId>org.projectlombok</groupId>
+                  
+      <artifactId>lombok</artifactId>
+                  
+      <version>1.18.46</version>
+                  
+      <scope>provided</scope>
+              
+    </dependency>
+            
+    <dependency>
+                  
+      <groupId>org.apache.logging.log4j</groupId>
+                  
+      <artifactId>log4j-api</artifactId>
+                  
+      <version>2.17.1</version>
+              
+    </dependency>
+            
+    <dependency>
+                  
+      <groupId>org.apache.logging.log4j</groupId>
+                  
+      <artifactId>log4j-core</artifactId>
+                  
+      <version>2.17.1</version>
+              
+    </dependency>
+            
+    <dependency>
+                  
+      <groupId>org.apache.logging.log4j</groupId>
+                  
+      <artifactId>log4j-slf4j-impl</artifactId>
+                  
+      <version>2.17.1</version>
+              
+    </dependency>
+            
+    <!-- https://mvnrepository.com/artifact/junit/junit -->
+            
+    <dependency>
+                  
+      <groupId>junit</groupId>
+                  
+      <artifactId>junit</artifactId>
+                  
+      <version>4.13.2</version>
+                  
+      <scope>test</scope>
+              
+    </dependency>
+        
+  </dependencies>
+      
+  <build>
+            
+    <plugins>
+                  
+      <plugin>
+                        
+        <groupId>org.apache.maven.plugins</groupId>
+                        
+        <artifactId>maven-compiler-plugin</artifactId>
+                        
+        <version>3.11.0</version>
+                        
+        <configuration>
+                              
+          <release>25</release>
+                              
+          <source>25</source>
+                              
+          <target>25</target>
+                              
+          <annotationProcessorPaths>
+                                    
+            <path>
+                                          
+              <groupId>org.projectlombok</groupId>
+                                          
+              <artifactId>lombok</artifactId>
+                                          
+              <version>1.18.46</version>
+                                      
+            </path>
+                                
+          </annotationProcessorPaths>
+                              
+          <compilerArgs>
+                                    
+            <arg>--add-opens=jdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED</arg>
+                                    
+            <arg>--add-opens=jdk.compiler/com.sun.tools.javac.code=ALL-UNNAMED</arg>
+                                    
+            <arg>--add-opens=jdk.compiler/com.sun.tools.javac.comp=ALL-UNNAMED</arg>
+                                    
+            <arg>--add-opens=jdk.compiler/com.sun.tools.javac.file=ALL-UNNAMED</arg>
+                                    
+            <arg>--add-opens=jdk.compiler/com.sun.tools.javac.tree=ALL-UNNAMED</arg>
+                                    
+            <arg>--add-opens=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED</arg>
+                                
+          </compilerArgs>
+                          
+        </configuration>
+                    
+      </plugin>
+              
+    </plugins>
+        
+  </build>
+          
+  <profiles>
+                
+    <profile>
+                      
+      <id>no-lombok</id>
+                      
+      <build>
+                            
         <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.10.1</version>
-                <configuration>
-                    <source>17</source>
-                    <target>17</target>
-                    <compilerArgs>
-                        <arg>--add-opens=jdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED</arg>
-                        <arg>--add-opens=jdk.compiler/com.sun.tools.javac.code=ALL-UNNAMED</arg>
-                        <arg>--add-opens=jdk.compiler/com.sun.tools.javac.comp=ALL-UNNAMED</arg>
-                        <arg>--add-opens=jdk.compiler/com.sun.tools.javac.file=ALL-UNNAMED</arg>
-                        <arg>--add-opens=jdk.compiler/com.sun.tools.javac.tree=ALL-UNNAMED</arg>
-                        <arg>--add-opens=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED</arg>
-                    </compilerArgs>
-                </configuration>
-            </plugin>
+                                  
+          <plugin>
+                                        
+            <groupId>org.apache.maven.plugins</groupId>
+                                        
+            <artifactId>maven-compiler-plugin</artifactId>
+                                        
+            <configuration>
+                                              
+              <compilerArgs>
+                                                    
+                <arg>-proc:none</arg>
+                                                
+              </compilerArgs>
+                                          
+            </configuration>
+                                    
+          </plugin>
+                              
         </plugins>
-    </build>
+                        
+      </build>
+                  
+    </profile>
+            
+  </profiles>
+  
 </project>

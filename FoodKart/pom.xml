@@ -28,7 +28,7 @@
 		<url/>
 	</scm>
 	<properties>
-		<java.version>17</java.version>
+		<java.version>25</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -48,6 +48,11 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<version>3.2.11</version>
+				<configuration>
+					<skip>false</skip>
+					<mainClass>com.food.kart.foodkart.FoodKartApplication</mainClass>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
