@@ -86,7 +86,8 @@
     <module>trello</module>
           
     <module>ratelimitertwo</module>
-      
+      <module>changeDataCapture</module>
+
   </modules>
       
   <properties>
