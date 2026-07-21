@@ -1,17 +1,18 @@
 package com.java.lld.design;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
-    static void main() {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        IO.println(String.format("Hello and welcome!"));
+    public static void main(String[] args) {
+        ChangeCaptureService captureService = new ChangeCaptureService();
+        DemoConsumer consumer = new DemoConsumer();
+        captureService.subscribe(consumer);
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            IO.println("i = " + i);
-        }
+        DataStore dataStore = new DataStore(captureService);
+
+        System.out.println("Starting CDC demo...");
+        dataStore.create(new Customer("1001", "Alice", "alice@example.com"));
+        dataStore.update("1001", "Alice Updated", "alice.updated@example.com");
+        dataStore.delete("1001");
+
+        System.out.println("Total captured changes: " + captureService.getChangeLog().size());
     }
 }
