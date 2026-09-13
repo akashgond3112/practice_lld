@@ -87,6 +87,7 @@
           
     <module>ratelimitertwo</module>
       <module>changeDataCapture</module>
+      <module>cookieHandling</module>
 
   </modules>
       
