@@ -1,17 +1,18 @@
 package cookie;
 
+import com.java.lld.design.CookieFilterApplication;
 import com.java.lld.design.command.CookieFilterCommand;
 import com.java.lld.design.reader.CookieLogReader;
 import com.java.lld.design.service.MostActiveCookieService;
 
-import static org.junit.Assert.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
+@SpringBootTest(classes = CookieFilterApplication.class)
 @DisplayName("Cookie filter application")
 class CookieFilterApplicationIntegrationTest {
 
