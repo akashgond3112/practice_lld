@@ -25,9 +25,6 @@ public class CookieFilterCommand implements Callable<Integer> {
     @Option(names = "-d", required = true, description = "Date in UTC (yyyy-MM-dd)")
     private String date;
 
-    @Option(names = "-s", required = true, description = "Date in UTC (yyyy-MM-dd)")
-    private String dbUrl;
-
     public CookieFilterCommand(MostActiveCookieService mostActiveCookieService) {
         this.mostActiveCookieService = mostActiveCookieService;
     }
